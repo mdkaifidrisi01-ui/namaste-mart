@@ -3,36 +3,38 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
- "scripts": {
-  "client": "cd client && npm run dev",
-  "server": "cd server && nodemon server.js",
 
-  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "scripts": {
+    "client": "cd client && npm run dev",
 
-  "build": "npm install --prefix client && npm run build --prefix client",
+    "server": "cd server && node server.js",
 
-  "start": "node server/server.js"
-   },
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+
+    "build": "npm install --prefix client && npm run build --prefix client",
+
+    "start": "node server/server.js"
+  },
+
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
-    "ansi-regex": "^6.0.1",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
+    "express": "^4.19.2",
     "framer-motion": "^12.23.24",
     "mongodb": "^7.0.0",
     "mongoose": "^9.1.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
+
   "devDependencies": {
     "concurrently": "^9.2.1",
-    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.10",
     "vite": "^7.1.7"
   },
-  "description": "## Prereqs - Node 18+ - MongoDB connection string",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
+
+  "description": "IGNOU Project",
   "license": "ISC"
 }
