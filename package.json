@@ -3,13 +3,16 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "client": "cd client && npm run dev",
-    "server": "cd server && npm run dev",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client && npm run build",
-    "preview": "cd client && npm run preview"
-  },
+ "scripts": {
+  "client": "cd client && npm run dev",
+  "server": "cd server && nodemon server.js",
+
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+
+  "build": "npm install --prefix client && npm run build --prefix client",
+
+  "start": "node server/server.js"
+   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
     "ansi-regex": "^6.0.1",
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "concurrently": "^9.2.1",
+    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.10",
     "vite": "^7.1.7"
   },

@@ -3,14 +3,22 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+
+  "homepage": "https://mdkaifidrisi01-ui.github.io/namaste-mart/",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "gh-pages": "^6.1.1"
   },
+
   "dependencies": {
     "@vitejs/plugin-react": "^5.1.0",
     "bootstrap": "^5.3.8",
